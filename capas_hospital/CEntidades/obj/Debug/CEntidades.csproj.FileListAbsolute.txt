@@ -1,0 +1,12 @@
+C:\Users\407\source\repos\CEntidades\bin\Debug\CEntidades.dll
+C:\Users\407\source\repos\CEntidades\bin\Debug\CEntidades.pdb
+C:\Users\407\source\repos\CEntidades\obj\Debug\CEntidades.csproj.AssemblyReference.cache
+C:\Users\407\source\repos\CEntidades\obj\Debug\CEntidades.csproj.CoreCompileInputs.cache
+C:\Users\407\source\repos\CEntidades\obj\Debug\CEntidades.dll
+C:\Users\407\source\repos\CEntidades\obj\Debug\CEntidades.pdb
+C:\Users\USER\Desktop\desk\cesde\semestre_2\c#\capas_daniel\CEntidades\bin\Debug\CEntidades.dll
+C:\Users\USER\Desktop\desk\cesde\semestre_2\c#\capas_daniel\CEntidades\bin\Debug\CEntidades.pdb
+C:\Users\USER\Desktop\desk\cesde\semestre_2\c#\capas_daniel\CEntidades\obj\Debug\CEntidades.csproj.AssemblyReference.cache
+C:\Users\USER\Desktop\desk\cesde\semestre_2\c#\capas_daniel\CEntidades\obj\Debug\CEntidades.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\desk\cesde\semestre_2\c#\capas_daniel\CEntidades\obj\Debug\CEntidades.dll
+C:\Users\USER\Desktop\desk\cesde\semestre_2\c#\capas_daniel\CEntidades\obj\Debug\CEntidades.pdb

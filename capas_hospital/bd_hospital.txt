@@ -1,0 +1,104 @@
+create database hospital
+
+use hospital
+
+create table cita(
+cod_cita nvarchar(10),
+fecha date,
+hora time,
+id_paciente nvarchar(10),
+id_medico nvarchar(10),
+valor int,
+diagnostico nvarchar(max),
+nom_acompañante nvarchar(50),
+activo bit,
+)
+
+--- crear tabla medico
+create table medico(
+id_medico nvarchar(10),
+nom_medico nvarchar(50),
+especialidad nvarchar(30),
+tel_medico nvarchar(10),
+activo bit,
+)
+
+--- crear tabla paciente
+create table paciente(
+id_paciente nvarchar(10),
+tip_doc nvarchar(20),
+nom_paciente nvarchar(50),
+dir_paciente nvarchar(50),
+tel_paciente nvarchar(10),
+activo bit,
+)
+
+--- Procedimientos Almacenados 
+--- Cita
+cretate procedure guardar_cita
+@cod_cita nvarchar(10),
+@fecha date,
+@hora time,
+@id_paciente nvarchar(10),
+@id_medico nvarchar(10),
+@valor int,
+@diagnostico nvarchar(50),
+@nom_acompañante nvarchar(50),
+@activo bit
+as
+insert into cita(cod_cita, fecha, hora, id_paciente, id_medico, valor, diagnostico, nom_acompañante, activo)
+values(@cod_cita, @fecha, @hora, @id_paciente, @id_medico, @valor, @diagnostico, @nom_acompañante, @activo)
+
+create procedure consultar_cita
+@cod_cita nvarchar(10)
+as
+select*from cita where  cod_cita = @cod_cita;
+
+cretae procedure anular_cita
+@cod_cita nvarchar(10)
+as
+update cita set activo=0 where cod_cita = @cod_cita
+
+---Medico
+create procedure guardar_medico
+@id_medico nvarchar(50),
+@nom_medico nvarchar(50),
+@especialidad nvarchar(50),
+@tel_medico nvarchar(50),
+@activo bit
+as
+insert into medico(id_medico, nom_medico, especialidad, tel_medico, activo)
+values( @id_medico, @nom_medico, @especialidad, @tel_medico, @activo)
+
+create procedure consultar_medico
+@id_medico nvarchar(10)
+as
+select*from medico where  id_medico = @id_medico
+
+ALTER procedure [dbo].[anular_medico]
+@id_medico nvarchar(10)
+as
+update medico set activo=0 where id_medico = @id_medico
+
+
+---Paciente
+create procedure guardar_paciente
+@id_paciente nvarchar(50),
+@tip_doc nvarchar(50),
+@nom_paciente nvarchar(50),
+@dir_paciente nvarchar(50),
+@tel_paciente nvarchar(50),
+@activo bit
+as
+insert into paciente(id_paciente, tip_doc, nom_paciente, dir_paciente, tel_paciente, activo)
+values( @id_paciente, @tip_doc, @nom_paciente, @dir_paciente, @tel_paciente, @activo)
+
+create procedure consultar_paciente
+@id_paciente nvarchar(10)
+as
+select*from paciente where id_paciente = @id_paciente
+
+create procedure anular_paciente
+@id_paciente nvarchar(10)
+as
+update paciente set activo=0 where id_paciente = @id_paciente
